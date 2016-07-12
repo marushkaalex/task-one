@@ -37,6 +37,13 @@ public class Drink {
                 .orElse(0D);
     }
 
+    public double getTotalAmount() {
+        return componentList.stream()
+                .map(Component::getAmount)
+                .reduce((total, amount) -> total + amount)
+                .orElse(0D);
+    }
+
     @Override
     public String toString() {
         return "Drink{" +
