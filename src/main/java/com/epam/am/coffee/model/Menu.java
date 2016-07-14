@@ -5,7 +5,7 @@ import com.epam.am.coffee.factory.DrinkFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Menu {
+public class Menu extends BaseModel {
     private List<Drink> drinkList;
 
     public Menu() {

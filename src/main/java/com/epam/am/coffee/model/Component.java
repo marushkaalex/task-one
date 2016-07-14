@@ -1,6 +1,6 @@
 package com.epam.am.coffee.model;
 
-public class Component {
+public class Component extends BaseModel {
     private String name;
     private double price;
     private double amount;

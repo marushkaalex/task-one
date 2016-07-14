@@ -1,6 +1,6 @@
 package com.epam.am.coffee.model;
 
-public class CoffeeSort {
+public class CoffeeSort extends BaseModel {
     private String name;
     private String description;
 

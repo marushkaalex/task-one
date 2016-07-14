@@ -2,7 +2,7 @@ package com.epam.am.coffee.model;
 
 import java.util.List;
 
-public class Drink {
+public class Drink extends BaseModel {
     private String name;
     private List<Component> componentList = null;
 
