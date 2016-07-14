@@ -4,6 +4,7 @@ import com.epam.am.coffee.factory.DrinkFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Menu extends BaseModel {
     private List<Drink> drinkList;
@@ -12,14 +13,6 @@ public class Menu extends BaseModel {
     }
 
     public Menu(List<Drink> drinkList) {
-        this.drinkList = drinkList;
-    }
-
-    public List<Drink> getDrinkList() {
-        return drinkList;
-    }
-
-    public void setDrinkList(List<Drink> drinkList) {
         this.drinkList = drinkList;
     }
 
@@ -35,6 +28,14 @@ public class Menu extends BaseModel {
 
         result.setDrinkList(drinkList);
         return result;
+    }
+
+    public List<Drink> getDrinkList() {
+        return drinkList;
+    }
+
+    public void setDrinkList(List<Drink> drinkList) {
+        this.drinkList = drinkList;
     }
 
     @Override

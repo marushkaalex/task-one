@@ -48,7 +48,8 @@ public class Drink extends BaseModel {
     public String toString() {
         return "Drink{" +
                 "name='" + name + '\'' +
-                ", componentList=" + componentList +
+                ", totalPrice=" + getTotalPrice() +
+                ", componentCount=" + componentList.size() +
                 '}';
     }
 }
