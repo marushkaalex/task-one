@@ -1,5 +1,6 @@
 package com.epam.am.coffee;
 
+import com.epam.am.coffee.factory.MenuFactory;
 import com.epam.am.coffee.model.Drink;
 import com.epam.am.coffee.model.Menu;
 import com.epam.am.coffee.service.MenuService;
@@ -18,7 +19,7 @@ public class Runner {
     public static void main(String[] args) {
         MenuService menuService = new MenuService();
 
-        Menu menu = Menu.createMockMenu();
+        Menu menu = MenuFactory.createMockMenu();
         logger.info("Created menu: {}", menu);
         menuService.sort(menu.getDrinkList(), ComparingBy.NAME);
         logger.info("Sorted by name: {}", menu);
