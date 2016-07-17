@@ -4,6 +4,8 @@ import com.epam.am.coffee.model.Drink;
 import com.epam.am.coffee.model.Menu;
 import com.epam.am.coffee.service.Filter;
 import com.epam.am.coffee.service.Sorter;
+import org.joda.money.CurrencyUnit;
+import org.joda.money.Money;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +24,8 @@ public class Runner {
         Sorter.sort(menu.getDrinkList(), Sorter.BY_AMOUNT);
         logger.info("Sorted by amount: {}", menu);
 
-        List<Drink> tmpDrinkList = Filter.byPrice(menu.getDrinkList(), 50, 200);
+        CurrencyUnit kzt = CurrencyUnit.of("KZT");
+        List<Drink> tmpDrinkList = Filter.byPrice(menu.getDrinkList(), Money.of(kzt, 50), Money.of(kzt, 200));
         logger.info("Filtered by price: {}", tmpDrinkList);
         tmpDrinkList = Filter.byComponentCount(menu.getDrinkList(), 3, 4);
         logger.info("Filtered by component count: {}", tmpDrinkList);

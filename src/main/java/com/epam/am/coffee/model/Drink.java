@@ -1,5 +1,8 @@
 package com.epam.am.coffee.model;
 
+import org.joda.money.CurrencyUnit;
+import org.joda.money.Money;
+
 import java.util.List;
 
 public class Drink extends BaseModel {
@@ -30,11 +33,11 @@ public class Drink extends BaseModel {
         this.componentList = componentList;
     }
 
-    public double getTotalPrice() {
+    public Money getTotalPrice() {
         return componentList.stream()
                 .map(Component::getPrice)
-                .reduce((total, price) -> total + price)
-                .orElse(0D);
+                .reduce(Money::plus)
+                .orElse(Money.zero(CurrencyUnit.of("KZT")));
     }
 
     public double getTotalAmount() {

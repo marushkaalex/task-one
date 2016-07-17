@@ -1,12 +1,14 @@
 package com.epam.am.coffee.model;
 
+import org.joda.money.Money;
+
 public class Coffee extends Component {
     private CoffeeSort sort;
 
     public Coffee() {
     }
 
-    public Coffee(String name, double price, double amount, Quantity quantity, CoffeeSort sort) {
+    public Coffee(String name, Money price, double amount, Quantity quantity, CoffeeSort sort) {
         super(name, price, amount, quantity);
         this.sort = sort;
     }

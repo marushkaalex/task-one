@@ -1,15 +1,17 @@
 package com.epam.am.coffee.model;
 
+import org.joda.money.Money;
+
 public class Component extends BaseModel {
     private String name;
-    private double price;
+    private Money price;
     private double amount;
     private Quantity quantity;
 
     public Component() {
     }
 
-    public Component(String name, double price, double amount, Quantity quantity) {
+    public Component(String name, Money price, double amount, Quantity quantity) {
         this.name = name;
         this.price = price;
         this.amount = amount;
@@ -24,11 +26,11 @@ public class Component extends BaseModel {
         this.name = name;
     }
 
-    public double getPrice() {
+    public Money getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Money price) {
         this.price = price;
     }
 

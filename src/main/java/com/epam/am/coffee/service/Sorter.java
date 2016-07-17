@@ -9,8 +9,11 @@ import java.util.List;
 public class Sorter {
     public static final Comparator<Drink> BY_NAME = (lhs, rhs) -> lhs.getName().compareTo(rhs.getName());
 
+//    public static final Comparator<Drink> BY_PRICE =
+//            (lhs, rhs) -> Double.compare(lhs.getTotalPrice(), rhs.getTotalPrice());
+
     public static final Comparator<Drink> BY_PRICE =
-            (lhs, rhs) -> Double.compare(lhs.getTotalPrice(), rhs.getTotalPrice());
+            (lhs, rhs) -> lhs.getTotalPrice().compareTo(rhs.getTotalPrice());
 
     public static final Comparator<Drink> BY_AMOUNT =
             (lhs, rhs) -> Double.compare(lhs.getTotalAmount(), rhs.getTotalAmount());
