@@ -42,7 +42,7 @@ public class Drink extends BaseModel {
 
     public double getTotalAmount() {
         return componentList.stream()
-                .map(Component::getAmount)
+                .map(i -> i.getQuantityUnit().getAmount())
                 .reduce((total, amount) -> total + amount)
                 .orElse(0D);
     }

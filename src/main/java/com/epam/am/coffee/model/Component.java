@@ -5,17 +5,15 @@ import org.joda.money.Money;
 public class Component extends BaseModel {
     private String name;
     private Money price;
-    private double amount;
-    private Quantity quantity;
+    private QuantityUnit quantityUnit;
 
     public Component() {
     }
 
-    public Component(String name, Money price, double amount, Quantity quantity) {
+    public Component(String name, Money price, QuantityUnit quantityUnit) {
         this.name = name;
         this.price = price;
-        this.amount = amount;
-        this.quantity = quantity;
+        this.quantityUnit = quantityUnit;
     }
 
     public String getName() {
@@ -34,20 +32,12 @@ public class Component extends BaseModel {
         this.price = price;
     }
 
-    public double getAmount() {
-        return amount;
+    public QuantityUnit getQuantityUnit() {
+        return quantityUnit;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public Quantity getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Quantity quantity) {
-        this.quantity = quantity;
+    public void setQuantityUnit(QuantityUnit quantityUnit) {
+        this.quantityUnit = quantityUnit;
     }
 
     @Override
@@ -55,8 +45,7 @@ public class Component extends BaseModel {
         return "Component{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
-                ", amount=" + amount +
-                ", quantity=" + quantity +
+                ", quantityUnit=" + quantityUnit +
                 '}';
     }
 }

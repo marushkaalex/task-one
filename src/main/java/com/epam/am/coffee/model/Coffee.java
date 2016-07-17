@@ -8,8 +8,8 @@ public class Coffee extends Component {
     public Coffee() {
     }
 
-    public Coffee(String name, Money price, double amount, Quantity quantity, CoffeeSort sort) {
-        super(name, price, amount, quantity);
+    public Coffee(String name, Money price, QuantityUnit quantityUnit, CoffeeSort sort) {
+        super(name, price, quantityUnit);
         this.sort = sort;
     }
 

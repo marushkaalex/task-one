@@ -1,11 +1,11 @@
 package com.epam.am.coffee.model;
 
-public enum Quantity {
+public enum Unit {
     GRAM("g."), MILLILITER("ml.");
 
     private String name;
 
-    Quantity(String name) {
+    Unit(String name) {
         this.name = name;
     }
 
