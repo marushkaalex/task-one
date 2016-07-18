@@ -11,6 +11,10 @@ public class Component extends BaseModel {
     }
 
     public Component(String name, Money price, QuantityUnit quantityUnit) {
+        if (name == null || price == null || quantityUnit == null) {
+            throw new IllegalArgumentException("All arguments must not be null");
+        }
+
         this.name = name;
         this.price = price;
         this.quantityUnit = quantityUnit;

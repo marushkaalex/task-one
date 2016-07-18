@@ -8,6 +8,10 @@ public class CoffeeSort extends BaseModel {
     }
 
     public CoffeeSort(String name, String description) {
+        if (name == null || description == null) {
+            throw new IllegalArgumentException("Name and description must not be null");
+        }
+
         this.name = name;
         this.description = description;
     }
